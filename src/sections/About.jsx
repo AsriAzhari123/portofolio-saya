@@ -67,7 +67,7 @@ export default function About() {
               skills.map((skill, i) => (
                 <li key={i} className={styles.skillItem}>
                   <span>{skill.name}</span>
-                  <span className={styles.skillLevel}>{skill.level}</span>
+                  <span className={styles.skillLevel}>|{skill.level}|</span>
                 </li>
               ))}
           </ul>
