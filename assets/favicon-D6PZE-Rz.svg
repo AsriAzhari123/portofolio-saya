@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="200" height="200">
+  <!-- New logo design -->
+  <path d="M100,400 L200,100 L300,400 L250,300 L150,300 Z" fill="none" stroke="#800080" stroke-width="35"/>
+  <path d="M100,100 L200,100 L200,200 L100,200 L100,300 L200,300 L200,400 L100,400 Z" fill="none" stroke="#800080" stroke-width="35"/>
+  <path d="M300,100 L300,200 Q300,250 250,250 L200,250 L300,300 L300,400 L200,400" fill="none" stroke="#800080" stroke-width="35"/>
+  <path d="M400,100 L400,400 M350,100 L450,100 M350,400 L450,400" fill="none" stroke="#800080" stroke-width="35"/>
+</svg>
