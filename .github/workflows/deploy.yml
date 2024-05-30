@@ -1,4 +1,3 @@
-# deploy menggunakan node js versi 20
 name: Deploy
 
 on:
@@ -21,8 +20,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Make build script executable
+        run:   chmod +x ./node_modules/.bin/vite
+
       - name: Build
-        run: npm run build
+        run: npm run dev
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
