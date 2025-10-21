@@ -48,8 +48,7 @@ export default function About() {
             <h1 className={styles.aboutHeading}>Tentang Saya</h1>
           </div>
           <p>
-            Hallo, perkenalkan nama saya Asri Azhari, bisa di panggil Asri. Saya Mahasiswa S1 Teknik
-            Informatika dari{" "}
+            Hallo, perkenalkan nama saya Asri Azhari, bisa di panggil Asri. Saya adalah lulusan S1 Teknik Informatika di{" "}
             <LinkTag style="text-violet-500 link" url="https://mikroskil.ac.id/">
               Universitas Mikroskil.
             </LinkTag>
