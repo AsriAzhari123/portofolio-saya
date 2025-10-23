@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { srConfig } from "../config";
 import project1 from "../assets/project-one.png";
 import project2 from "../assets/project-two.png";
+import project3 from "../assets/project-three.png";
+import project4 from "../assets/project-four.png";
 import sr from "../utils/sr";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
@@ -67,7 +69,39 @@ export default function Built() {
               src={project2}
               draggable="false"
               loading="lazy"
-              alt="project1"
+              alt="project2"
+            />
+          </figure>
+             <figure>
+            <img 
+              className={styles.builtItemCoverImg}
+              draggable="false"
+              loading="lazy"
+              src={project3}
+              alt="project3"
+            />
+          </figure>
+          <div className={styles.builtItemContent}>
+            <h1 className={styles.builtItemHeading}>MuseumYog Admin</h1>
+            <h1 className={styles.builtContentHeading}>Project Ketiga</h1>
+            <p className={styles.builtItemText}>
+              MuseumYog! adalah platform layanan museum yang menyediakan informasi lengkap, fasilitas, ulasan pengunjung, serta kemudahan pembelian tiket secara online, sehingga memudahkan pengunjung merencanakan kunjungan mereka dengan efisien dan memberikan kontrol penuh kepada pengelola museum atas pemesanan tiket, pengaturan acara, dan penawaran khusus, sehingga mengatasi kesulitan informasi yang dihadapi oleh para pecinta seni dan budaya.
+            </p>
+          </div>
+          <div className={styles.builtItemContent}>
+            <h1 className={styles.builtItemHeading}>SmartLok</h1>
+            <h1 className={styles.builtContentHeading}>Project Keempat</h1>
+            <p className={styles.builtItemText}>
+              Smartlo adalah situs web yang menyediakan layanan penyimpanan digital yang efisien dan aman di Perpustakaan Nasional untuk meningkatkan kenyamanan pengguna saat menitipkan barang. Kami fokus pada pengalaman pengguna yang lancar dengan mengkhususkan diri pada fitur penyimpanan bagasi, memastikan kunjungan pengunjung ke perpustakaan menjadi mudah, aman, dan nyaman.
+            </p>
+          </div>
+          <figure>
+            <img 
+              className={styles.builtItemCoverImg}
+              draggable="false"
+              loading="lazy"
+              src={project4}
+              alt="project4"
             />
           </figure>
         </div>
