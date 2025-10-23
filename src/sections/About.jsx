@@ -18,10 +18,10 @@ export default function About() {
   };
 
   const skills = [
-    { name: "JavaScript", level: "Expert" },
+    { name: "JavaScript", level: "Intermediate" },
     { name: "HTML", level: "Expert" },
-    { name: "React", level: "Advanced" },
-    { name: "CSS", level: "Advanced" },
+    { name: "React", level: "Intermediate" },
+    { name: "CSS", level: "Intermediate" },
     { name: "Flutter", level: "Intermediate" },
     { name: "Dart", level: "Intermediate" },
   ];
