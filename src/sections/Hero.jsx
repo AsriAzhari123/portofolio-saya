@@ -41,7 +41,7 @@ export default function Hero() {
           className={styles.heroContent}
         >
           <motion.div variants={fadeAnimation} className="inline-flex items-center">
-            <h1 className={styles.heroHeading}>Hallo</h1>
+            <h1 className={styles.heroHeading}>Hello</h1>
             <picture className="mx-2">
               <source
                 srcSet="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fb/512.webp"
@@ -54,7 +54,7 @@ export default function Hero() {
                 height="30"
               />
             </picture>
-            <h1 className={styles.heroHeading}>, perkenalkan nama saya</h1>
+            <h1 className={styles.heroHeading}>, let me introduce myself, my name is</h1>
           </motion.div>
 
           <motion.h2 variants={fadeAnimation} className={styles.heroSubHeading1}>

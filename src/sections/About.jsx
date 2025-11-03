@@ -48,19 +48,19 @@ export default function About() {
             <h1 className={styles.aboutHeading}>Tentang Saya</h1>
           </div>
           <p>
-            Hallo, perkenalkan nama saya Asri Azhari, bisa di panggil Asri. Saya adalah lulusan S1 Teknik Informatika di{" "}
+            Hello, let me introduce myself, my name is Asri Azhari, you can call me Asri. I graduated with a Bachelor's degree in Information Technology from{" "}
             <LinkTag style="text-violet-500 link" url="https://mikroskil.ac.id/">
-              Universitas Mikroskil.
+              Mikroskil University.
             </LinkTag>
           </p>
           <p>
-            Saya adalah Front-End Developer yang berfokus pada pengembangan aplikasi web dan mobile. 
-            Saya memiliki pengalaman dalam pengembangan aplikasi web dan mobile menggunakan teknologi terbaru. Saat ini saya sedang belajar dan mengembangkan aplikasi menggunakan teknologi ReactJS dan Flutter.
+            I am a Front-End Developer focused on developing web and mobile applications.
+            I have experience in developing web and mobile applications using the latest technologies. Currently, I am learning and developing applications using ReactJS and Flutter technologies.
           </p>
           <p>
-           Saya juga sedang mengikuti kursus online untuk meningkatkan kemampuan saya dalam pemrograman dan desain.
+           I am also interested in learning about programming languages and design, to improve my skills in programming and design.
           </p>
-          <p>Berikut adalah beberapa keahlian yang saya miliki, diantaranya :</p>
+          <p>Here are some of the skills I have, including :</p>
           <ul className={styles.aboutListSkills}>
             {skills &&
               skills.map((skill, i) => (

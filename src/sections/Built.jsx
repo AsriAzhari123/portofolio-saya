@@ -33,7 +33,7 @@ export default function Built() {
     <>
       <section ref={revealContainer} id="built" className={styles.builtSection}>
         <h1 className="text-5xl pb-3 bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 mb-8 md:mb-7 font-bold">
-          Sesuatu yang telah saya bangun
+          Something that I have built
         </h1>
         <div className={styles.builtItem}>
           <figure>
@@ -47,10 +47,9 @@ export default function Built() {
           </figure>
           <div className={styles.builtItemContent}>
             <h1 className={styles.builtItemHeading}>PetAdopted</h1>
-            <h1 className={styles.builtContentHeading}>Project Pertama</h1>
+            <h1 className={styles.builtContentHeading}>First Project</h1>
             <p className={styles.builtItemText}>
-              Sebuah aplikasi android berbasis flutter dart yang memudahkan penggunanya untuk menitipkan hewan peliharaan, dan juga mencari hewan peliharaan yang ingin diadopsi.
-              aplikasi ini juga melayani service ke rumah untuk grooming hewan peliharaan. dan pengguna juga dapat memberikan hewan yang terlantar.
+              An Android application based on Flutter Dart that makes it easy for users to leave their pets, as well as look for pets they want to adopt. This application also provides home services for pet grooming, and users can also give abandoned animals.
             </p>
           </div>
         </div>
@@ -58,9 +57,9 @@ export default function Built() {
         <div className={styles.builtItemSecond}>
           <div className={styles.builtItemContent}>
             <h1 className={styles.builtItemHeading}>Medical Record</h1>
-            <h1 className={styles.builtContentHeading}>Project Kedua</h1>
+            <h1 className={styles.builtContentHeading}>Second Project</h1>
             <p className={styles.builtItemText}>
-              Aplikasi berbasis flutter dart yang memudahkan pengguna untuk menyimpan rekam medis pasien, dan juga memudahkan dokter untuk mengakses rekam medis pasien.
+              A Flutter Dart-based application that makes it easy for users to store patient medical records, and also allows doctors to easily access patient medical records.
             </p>
           </div>
           <figure>
@@ -83,16 +82,16 @@ export default function Built() {
           </figure>
           <div className={styles.builtItemContent}>
             <h1 className={styles.builtItemHeading}>MuseumYog Admin</h1>
-            <h1 className={styles.builtContentHeading}>Project Ketiga</h1>
+            <h1 className={styles.builtContentHeading}>Third Project</h1>
             <p className={styles.builtItemText}>
-              MuseumYog! adalah platform layanan museum yang menyediakan informasi lengkap, fasilitas, ulasan pengunjung, serta kemudahan pembelian tiket secara online, sehingga memudahkan pengunjung merencanakan kunjungan mereka dengan efisien dan memberikan kontrol penuh kepada pengelola museum atas pemesanan tiket, pengaturan acara, dan penawaran khusus, sehingga mengatasi kesulitan informasi yang dihadapi oleh para pecinta seni dan budaya.
+              MuseumYog! is a museum service platform that provides complete information, facilities, visitor reviews, as well as the convenience of purchasing tickets online, making it easier for visitors to plan their visits efficiently and giving museum managers full control over ticket bookings, event arrangements, and special offers, thereby addressing the information challenges faced by art and culture enthusiasts.
             </p>
           </div>
           <div className={styles.builtItemContent}>
             <h1 className={styles.builtItemHeading}>SmartLok</h1>
-            <h1 className={styles.builtContentHeading}>Project Keempat</h1>
+            <h1 className={styles.builtContentHeading}>Fourth Project</h1>
             <p className={styles.builtItemText}>
-              Smartlo adalah situs web yang menyediakan layanan penyimpanan digital yang efisien dan aman di Perpustakaan Nasional untuk meningkatkan kenyamanan pengguna saat menitipkan barang. Kami fokus pada pengalaman pengguna yang lancar dengan mengkhususkan diri pada fitur penyimpanan bagasi, memastikan kunjungan pengunjung ke perpustakaan menjadi mudah, aman, dan nyaman.
+              Smartlo is a website that provides efficient and secure digital storage services at the National Library to enhance user convenience when storing items. We focus on a smooth user experience by specializing in luggage storage features, ensuring that visitors' trips to the library are easy, safe, and comfortable.
             </p>
           </div>
           <figure>

@@ -34,13 +34,13 @@ export default function Contact () {
     return (
         <section ref={revealContainer} id="contact" className={styles.contactSection}>
             <h1 className="text-5xl pb-3 bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 mb-8 md:mb-7 font-bold">
-                Sosial Media
+                Social Media
             </h1>
             <div className={styles.contactContent}>
                 <div className={styles.contactContentText}>
-                    <h1 className={styles.contactContentHeading}>Social Media Saya</h1>
+                    <h1 className={styles.contactContentHeading}>My Social Media</h1>
                     <p className={styles.contactContentText}>
-                        Jika Anda tertarik dengan saya dan ingin melihat lebih tentang saya, silahkan kunjungi saya melalui sosial media dibawah ini :
+                        If you are interested in me and want to see more about me, please visit me through the social media below :
                     </p>
                 </div>
             </div>
