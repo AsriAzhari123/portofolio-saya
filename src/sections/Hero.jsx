@@ -54,7 +54,7 @@ export default function Hero() {
                 height="30"
               />
             </picture>
-            <h1 className={styles.heroHeading}>, let me introduce myself, my name is</h1>
+            <h1 className={styles.heroHeading}>,my name is</h1>
           </motion.div>
 
           <motion.h2 variants={fadeAnimation} className={styles.heroSubHeading1}>
@@ -63,9 +63,6 @@ export default function Hero() {
           <motion.h3 variants={fadeAnimation} className={styles.heroSubHeading2}>
             Web Developer
           </motion.h3>
-          <motion.p variants={fadeAnimation} className={styles.heroText}>
-           Front-End Developer
-          </motion.p>
         </motion.div>
       </section>
     </>

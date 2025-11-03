@@ -8,34 +8,30 @@ const Navbar = () => {
   const [scrolled, setSrolled] = useState(false);
   const [toggle, setToggle] = useState(false);
   
-
   const navbarRef = useRef(null);
   const navbarWrapperRef = useRef();
 
   useOnClickOutside(navbarWrapperRef, () => setToggle(false));
 
-
   const style = {
-    navbar: `fixed border-b border-gray-200 dark:border-dark-500 top-0 w-full z-20 py-3 ${
+    navbar: `fixed border-b border-gray-200 dark:border-dark-500 top-0 w-full z-20 py-3 sm:py-4 ${
       scrolled
         ? "bg-[#f6f8fd]/50 backdrop-blur-md ease-in duration-200 dark:bg-dark-800/90"
         : "ease-out duration-200 dark:bg-dark-900"
     }`,
-    navbarContainer: `mx-5 md:mx-12 flex flex-wrap justify-between items-center`,
+    navbarContainer: `mx-4 sm:mx-6 md:mx-12 flex flex-wrap justify-between items-center`,
     navbarLogoContainer: `flex items-center justify-center`,
-    navbarLogo: `w-10 h-10`,
+    navbarLogo: `w-8 h-8 sm:w-10 sm:h-10`,
     navbarMenu: `hidden w-full lg:flex lg:flex-row lg:items-center lg:justify-between lg:w-auto md:font-medium`,
-    navbarMenuListWrapper: `flex flex-row space-x-10`,
-    navbarLink: `block font-semibold select-none link py-2 text-center dark:text-white hover:text-violet-700 hover:dark:text-violet-700 cursor-pointer`,
+    navbarMenuListWrapper: `flex flex-row space-x-6 xl:space-x-10`,
+    navbarLink: `block font-semibold select-none link py-2 text-sm xl:text-base text-center dark:text-white hover:text-violet-700 hover:dark:text-violet-700 cursor-pointer transition-colors duration-200`,
     navbarBtn: `border-l-[0.01rem] pl-5 dark:border-dark-500`,
     navbarLinkActive: `text-violet-700 dark:text-violet-500`,
     navbarLinkMobileActive: `bg-violet-500 text-white rounded-md`,
-    buttonOpenMenu: `flex z-50 lg:hidden cursor-pointer text-xl rounded-full p-2 text-slate-900 hover:bg-gray-200 dark:text-white dark:hover:bg-dark-500`,
-    mobileMenuWrapper: `fixed shadow-md border-l top-0 right-0 bottom-0 h-screen lg:hidden bg-white dark:bg-dark-800 dark:border-0`,
+    hamburgerMenu: `z-50 lg:hidden cursor-pointer rounded-full text-lg w-[37px] h-[37px] hover:bg-gray-200 dark:hover:bg-dark-500 flex items-center justify-center`,
+    hamburgerLine: `w-[17px] h-[2px] bg-slate-800 dark:bg-white transition-all duration-300 ease-in-out`,
+    mobileMenuWrapper: `fixed shadow-md border-l top-0 right-0 bottom-0 h-screen lg:hidden bg-white dark:bg-dark-800 dark:border-0 overflow-y-auto`,
     mobileMenuHeader: `flex justify-between align-middle relative px-5 py-2.5 items-center`,
-    buttonCloseMobileMenu: `flex lg:hidden cursor-pointer text-xl rounded-full p-2 text-slate-900 hover:bg-gray-200 dark:text-white dark:hover:bg-dark-500`,
-    hamburgerMenu: `z-50 lg:hidden cursor-pointer rounded-full text-lg w-[37px] h-[37px] hover:bg-gray-200 dark:hover:bg-dark-500  flex items-center justify-center relative`,
-    hamburgerLine: `transform transition rounded w-[17px] h-[2px] bg-slate-800 dark:bg-white absolute`,
   };
 
   const slideUp = {
@@ -59,12 +55,11 @@ const Navbar = () => {
   };
 
   const navLink = [
-    { id: 1, setTo: "hero", name: "Utama" },
-    { id: 2, setTo: "about", name: "Tentang" },
-    { id: 3, setTo: "built", name: "Project Saya" },
+    { id: 1, setTo: "hero", name: "Main" },
+    { id: 2, setTo: "about", name: "About" },
+    { id: 3, setTo: "built", name: "My Project" },
     { id: 4, setTo: "contact", name: "Social Media" }, 
   ];
-  
   
   useEffect(() => {
     window.onscroll = () => {
@@ -80,16 +75,18 @@ const Navbar = () => {
     <>
       {/* Backdrop */}
       <div
-        className={`fixed z-10 inset-0 bg-dark-900/50  backdrop-blur lg:hidden transition-opacity duration-200 ${
+        className={`fixed z-10 inset-0 bg-dark-900/50 backdrop-blur lg:hidden transition-opacity duration-200 ${
           toggle ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         aria-hidden="true"
       ></div>
+      
       <nav ref={navbarWrapperRef} className={style.navbar}>
         <div className={style.navbarContainer}>
           <div className={style.navbarLogoContainer}>
             <img src={navLogo} className={style.navbarLogo} alt="logo-nav" />
           </div>
+          
           <div className={style.navbarMenu}>
             <motion.ul
               variants={slideUp}
@@ -99,7 +96,7 @@ const Navbar = () => {
             >
               {navLink &&
                 navLink.map((item, i) => (
-                  <motion.li className="pr-5" variants={slideUp} key={i}>
+                  <motion.li className="pr-3 lg:pr-5" variants={slideUp} key={i}>
                     <Link
                       to={item.setTo}
                       spy={true}
@@ -116,12 +113,16 @@ const Navbar = () => {
             </motion.ul>
           </div>
 
-          {/* Open menu mobile */}
+          {/* Hamburger Icon (3 lines) */}
           <div onClick={() => setToggle(!toggle)} className={style.hamburgerMenu}>
-            {/* Hamburger icon */}
-            <div className={style.hamburgerLine}></div>
+            <div className="flex flex-col gap-[5px] items-center justify-center">
+              <span className={`${style.hamburgerLine} ${toggle ? 'rotate-45 translate-y-[7px]' : ''}`}></span>
+              <span className={`${style.hamburgerLine} ${toggle ? 'opacity-0' : 'opacity-100'}`}></span>
+              <span className={`${style.hamburgerLine} ${toggle ? '-rotate-45 -translate-y-[7px]' : ''}`}></span>
+            </div>
           </div>
         </div>
+        
         <AnimatePresence>
           {toggle && (
             <motion.div
@@ -137,9 +138,11 @@ const Navbar = () => {
               className={style.mobileMenuWrapper}
             >
               <div className={style.mobileMenuHeader}>
-                {/* Close button */}
+                {/* Logo on mobile menu */}
+                <img src={navLogo} className="w-8 h-8" alt="logo-nav" />
               </div>
-              <ul className="flex flex-col justify-center space-y-7 p-5">
+              
+              <ul className="flex flex-col justify-center space-y-5 p-5 mt-4">
                 {navLink &&
                   navLink.map((item, i) => (
                     <li key={i}>
@@ -150,9 +153,9 @@ const Navbar = () => {
                         smooth={true}
                         offset={-50}
                         duration={500}
-                        className="block py-2 p-5 text-slate-800 dark:text-white cursor-pointer"
+                        className="block py-3 px-5 text-slate-800 dark:text-white cursor-pointer font-medium hover:bg-gray-100 dark:hover:bg-dark-700 rounded-md transition-colors duration-200"
                         onClick={() => {
-                          setToggle(false); // Close the menu
+                          setToggle(false);
                           if (item.setTo === "contact") {
                             document.getElementById("contact").scrollIntoView({
                               behavior: "smooth",
