@@ -61,7 +61,7 @@ export default function Hero() {
             Asri Azhari
           </motion.h2>
           <motion.h3 variants={fadeAnimation} className={styles.heroSubHeading2}>
-            Web Developer
+            Web & Mobile Developer
           </motion.h3>
         </motion.div>
       </section>
