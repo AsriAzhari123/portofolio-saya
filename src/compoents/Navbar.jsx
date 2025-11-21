@@ -5,7 +5,7 @@ import navLogo from "../favicon.svg";
 import useOnClickOutside from "../hooks/useOnClickOutside";
 
 const Navbar = () => {
-  const [scrolled, setSrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [toggle, setToggle] = useState(false);
   
   const navbarRef = useRef(null);
@@ -62,14 +62,20 @@ const Navbar = () => {
   ];
   
   useEffect(() => {
-    window.onscroll = () => {
+    const handleScroll = () => {
       if (window.scrollY > 70) {
-        setSrolled(true);
+        setScrolled(true);
       } else {
-        setSrolled(false);
+        setScrolled(false);
       }
     };
-  });
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   
   return (
     <>
@@ -101,7 +107,7 @@ const Navbar = () => {
                       to={item.setTo}
                       spy={true}
                       smooth={true}
-                      offset={-500}
+                      offset={-80}
                       activeClass={style.navbarLinkActive}
                       duration={500}
                       className={style.navbarLink}
@@ -151,17 +157,10 @@ const Navbar = () => {
                         spy={true}
                         activeClass={style.navbarLinkMobileActive}
                         smooth={true}
-                        offset={-50}
+                        offset={-80}
                         duration={500}
                         className="block py-3 px-5 text-slate-800 dark:text-white cursor-pointer font-medium hover:bg-gray-100 dark:hover:bg-dark-700 rounded-md transition-colors duration-200"
-                        onClick={() => {
-                          setToggle(false);
-                          if (item.setTo === "contact") {
-                            document.getElementById("contact").scrollIntoView({
-                              behavior: "smooth",
-                            });
-                          }
-                        }}
+                        onClick={() => setToggle(false)}
                       >
                         {item.name}
                       </Link>
